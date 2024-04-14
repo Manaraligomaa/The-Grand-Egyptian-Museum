@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>National Museum of Egypt</title>
+    <link rel="stylesheet" type="text/css" href="../css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="../css/styleNav.css" />
+    <link rel="stylesheet" href="../css/index.css" />
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <link rel="stylesheet" href="ticket.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Forum&display=swap" rel="stylesheet">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 10px;
+        }
+
+        th, td {
+            padding: 8px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+
+        input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 20px 20px;
+            background-color: #cc7e4e;
+            color: #fff;
+            border: none;
+            border-radius: 2px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color:#262318;
+        }
+
+        /* Hide foreign tour options by default */
+        #foreign-tour-options {
+            display: none;
+        }
+
+        /* Show foreign tour options when the foreign radio button is selected */
+        #foreign:checked ~ #foreign-tour-options {
+            display: table;
+        }
+		#foreign:checked ~ #egyptian-tour-options {
+            display: none;
+        }
+		
+        /* Show Egyptian tour options when the Egyptian radio button is selected */
+        #egyptian:checked ~ #egyptian-tour-options {
+            display: table;
+        }
+
+        /* Custom radio button styles */
+        input[type="radio"] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: 2px solid #ccc;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            outline: none;
+        }
+
+        input[type="radio"]:checked {
+            background-color: #cc7e4e;
+            border-color: #cc7e4e;
+        }
+    </style>
+</head>
+
+<body style="font-family:Forum">
+    <nav>
+        <div class="logo">
+            <img src="../img/logo.png" alt="logo" />
+        </div>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="research.html">Research</a></li>
+            <li><a href="gameTour.html">Game Tour</a></li>
+            <li><a href="videos.html">Videos</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h1>Book Tickets</h1>
+        <img src="../img/7.jpg" alt="img1" style="float:right; width:300px; margin-left:20px;">
+
+        <form action="../htmlPages/visit.html">
+            <label for="nationality">Select Nationality:</label><br>
+            <input type="radio" id="egyptian" name="nationality" value="egyptian" checked>
+            <label for="egyptian">Egyptian</label><br>
+            <input type="radio" id="foreign" name="nationality" value="foreign">
+            <label for="foreign">Foreign</label><br><br>
+
+            <table id="egyptian-tour-options">
+                <tr>
+                    <th>Type</th>
+                    <th>Count</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Guided Tour</td>
+                    <td><input type="number" min="0" value="0"></td>
+                    <td>350</td>
+                </tr>
+                <tr>
+                    <td>Guided Tour - Student</td>
+                    <td><input type="number" min="0" value="0"></td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Guided Tour - Child</td>
+                    <td><input type="number" min="0" value="0"></td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>Guided Tour - Senior</td>
+                    <td><input type="number" min="0" value="0"></td>
+                    <td>200</td>
+                </tr>
+            </table>
+
+            <table id="foreign-tour-options">
+                <tr>
+                    <th>Type</th>
+                    <th>Count</th>
+                    <th>Price</th>
+                </tr>
+                <tr>
+                    <td>Guided Tour - Foreign Adult</td>
+                    <td><input type="number" min="0" value="0"></td>
+                    <td>1200</td>
+                </tr>
+                <tr>
+                    <td>Guided Tour - Foreign Student</td>
+                    <td><input type="number" min="0" value="0"></td>
+                    <td>750</td>
+                </tr>
+                <tr>
+                    <td>Guided Tour - Foreign Child</td>
+                    <td><input type="number" min="0" value="0"></td>
+                    <td>750</td>
+                </tr>
+            </table><br>
+
+            <a href="../htmlPages/visit.html"><input type="submit" value="Book"></a>
+        </form>
+    </div>
+    <footer style="clear: both">
+        <p>
+            <a href="index.html">Home</a>
+            <a href="research.html">Research</a>
+            <a href="gameTour.html">GameTour</a>
+            <a href="videos.html">Videos</a>
+            <a href="conact.html">Contact</a>
+        </p>
+
+        <p>
+            <a href="#">National Museum of Egypt</a>
+        </p>
+    </footer>
+</body>
+
+</html>
